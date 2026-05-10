@@ -38,6 +38,10 @@ public class MyStreamV3 <T> {
         return MyStreamV3.of(mapped);
     }
 
+    public T getFirst() {
+        return internalList.getFirst();
+    }
+
     public void forEach(Consumer<T> consumer) {
         for (T t : internalList) {
             consumer.accept(t);
