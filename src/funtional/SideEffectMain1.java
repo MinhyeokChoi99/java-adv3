@@ -1,0 +1,16 @@
+package funtional;
+
+import java.util.function.Function;
+
+public class SideEffectMain1 {
+    public static int count = 0;
+
+    static void main(String[] args) {
+        Function<Integer,Integer> func = x -> {
+            count++;
+            return x * 2;
+        };
+        func.apply(10);
+        System.out.println("count = " + count);
+    }
+}
